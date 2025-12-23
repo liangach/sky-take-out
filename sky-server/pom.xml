@@ -54,6 +54,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
         </dependency>
 
         <dependency>
@@ -81,6 +82,7 @@
             <artifactId>aspectjweaver</artifactId>
         </dependency>
 
+        <!--为Java MVC框架集成Swagger生成Api文档的增强解决方案-->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-boot-starter</artifactId>
