@@ -4,3 +4,8 @@
 *.class
 *Test.java
 **/test/
+
+# 避免敏感文件被提交
+sky-server/src/main/resources/application-dev-local.yml
+# 其他环境的敏感配置，一并排除
+sky-server/src/main/resources/application-*-local.yml
