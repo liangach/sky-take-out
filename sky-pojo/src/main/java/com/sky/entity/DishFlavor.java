@@ -11,7 +11,7 @@ import java.io.Serializable;
  * 菜品口味
  */
 @Data
-@Builder
+@Builder // 生成builder方法
 @NoArgsConstructor
 @AllArgsConstructor
 public class DishFlavor implements Serializable {
