@@ -8,10 +8,13 @@ sky:
     password: 123456
   alioss:
     endpoint: oss-cn-beijing.aliyuncs.com
-    access-key-id: ${access-key-id}
-    access-key-secret: ${access-key-secret}
+    access-key-id: ${access-key-id-dev}
+    access-key-secret: ${access-key-secret-dev}
     bucket-name: liangach
   redis:
     host: localhost
     port: 6379
     password: 123456
+  wechat:
+    appid: ${sky.wechat.appid-dev}
+    secret: ${sky.wechat.secret-dev}
