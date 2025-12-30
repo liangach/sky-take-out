@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@Builder
+@Builder  // 生成builder方法，创建builder对象
 @NoArgsConstructor
 @AllArgsConstructor
 public class DishVO implements Serializable {

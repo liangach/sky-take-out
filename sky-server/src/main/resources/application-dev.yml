@@ -11,3 +11,7 @@ sky:
     access-key-id: ${access-key-id}
     access-key-secret: ${access-key-secret}
     bucket-name: liangach
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
