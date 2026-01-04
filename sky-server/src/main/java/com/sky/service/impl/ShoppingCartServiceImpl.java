@@ -95,7 +95,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         // 判断当前商品是否存在于购物车中
         BeanUtils.copyProperties(shoppingCartDTO,shoppingCart); // 将DTO对象拷贝到entity对象
         // 查询当前登录用户的购物车数据
-        shoppingCart.setId(BaseContext.getCurrentId());
+        shoppingCart.setUserId(BaseContext.getCurrentId());
         List<ShoppingCart> shoppingCarts = shoppingCartMapper.shoppingCartList(shoppingCart);
         // 如果购物车为空，不能删除数据
         if(shoppingCarts != null && !shoppingCarts.isEmpty()){
@@ -103,6 +103,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
             // 获取购物车中该商品对象的数量
             Integer number = shoppingCart.getNumber();
             if(number == 1){
+                // 如果商品数量等于1，直接删除该商品
                 shoppingCartMapper.deleteById(shoppingCart.getId());
             } else {
                 shoppingCart.setNumber(shoppingCart.getNumber() - 1);
